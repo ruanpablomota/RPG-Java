@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RPG-Java.iml" filepath="$PROJECT_DIR$/.idea/RPG-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rpg-Java/Rpg-Java.iml" filepath="$PROJECT_DIR$/Rpg-Java/Rpg-Java.iml" />
     </modules>
   </component>
 </project>
