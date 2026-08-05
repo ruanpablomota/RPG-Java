@@ -9,14 +9,16 @@ public class Guerreiro extends Personagem implements Atacante {
 
     @Override
     public void exibirStatus() {
-        System.out.println("Nome " + getNome() +
-                            "\nVida " + getVida() +
-                            "\nAtaque " + getAtaque() +
-                            "\nNível " + getNivel());
+        System.out.println("=== Guerreiro ===");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Vida: " + getVida());
+        System.out.println("Ataque: " + getAtaque());
+        System.out.println("Nível: " + getNivel());
     }
 
     @Override
     public void atacar(Personagem alvo) {
-
+        alvo.setVida(alvo.getVida() - getAtaque());
+        System.out.println(getNome() + " atacou " + alvo.getNome());
     }
 }
