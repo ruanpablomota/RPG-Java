@@ -18,7 +18,10 @@ public class Guerreiro extends Personagem implements Atacante {
 
     @Override
     public void atacar(Personagem alvo) {
-        alvo.setVida(alvo.getVida() - getAtaque());
+        int novaVida = Math.max(0, alvo.getVida() - getAtaque());
+        alvo.setVida(novaVida);
+
         System.out.println(getNome() + " atacou " + alvo.getNome());
+        System.out.println("Vida restante de " + alvo.getNome() + ": " + alvo.getVida());
     }
 }
