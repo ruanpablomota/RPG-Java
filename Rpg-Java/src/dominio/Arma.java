@@ -1,6 +1,6 @@
 package dominio;
 
-public abstract class Arma {
+public class Arma {
     private String nome;
     private int dano;
 

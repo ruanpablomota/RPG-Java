@@ -1,15 +1,24 @@
 package dominio;
 
-public abstract class Personagem {
+public abstract class Personagem  {
     private String nome;
     private int vida;
-    private int ataque;
+    private int ataqueBase;
+    private Arma arma;
     private int nivel;
 
-    public Personagem(String nome, int vida, int ataque, int nivel) {
+    public Personagem(String nome, int vida, int ataqueBase, Arma arma, int nivel) {
         this.nome = nome;
         this.vida = vida;
-        this.ataque = ataque;
+        this.ataqueBase = ataqueBase;
+        this.arma = arma;
+        this.nivel = nivel;
+    }
+
+    public Personagem(String nome, int vida, int ataqueBase , int nivel) {
+        this.nome = nome;
+        this.vida = vida;
+        this.ataqueBase = ataqueBase;
         this.nivel = nivel;
     }
 
@@ -27,11 +36,17 @@ public abstract class Personagem {
         this.vida = vida;
     }
 
-    public int getAtaque() {
-        return ataque;
+    public int getAtaqueBase() {
+        return ataqueBase;
+    }
+
+    public Arma getArma() {
+        return arma;
     }
 
     public int getNivel() {
         return nivel;
     }
+
+
 }

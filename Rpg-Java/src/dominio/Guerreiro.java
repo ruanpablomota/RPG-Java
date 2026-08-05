@@ -12,13 +12,13 @@ public class Guerreiro extends Personagem implements Atacante {
         System.out.println("=== Guerreiro ===");
         System.out.println("Nome: " + getNome());
         System.out.println("Vida: " + getVida());
-        System.out.println("Ataque: " + getAtaque());
+        System.out.println("Ataque: " + getAtaqueBase());
         System.out.println("Nível: " + getNivel());
     }
 
     @Override
     public void atacar(Personagem alvo) {
-        int novaVida = Math.max(0, alvo.getVida() - getAtaque());
+        int novaVida = Math.max(0, alvo.getVida() - getAtaqueBase());
         alvo.setVida(novaVida);
 
         System.out.println(getNome() + " atacou " + alvo.getNome());
