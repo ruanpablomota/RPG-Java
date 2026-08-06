@@ -24,6 +24,14 @@ public abstract class Personagem  {
 
     public abstract void exibirStatus();
 
+    public int getAtaqueTotal() {
+        if (arma == null){
+            return ataqueBase;
+        }
+
+        return  ataqueBase + arma.getDano();
+    }
+
     public String getNome() {
         return nome;
     }
@@ -38,6 +46,10 @@ public abstract class Personagem  {
 
     public int getAtaqueBase() {
         return ataqueBase;
+    }
+
+    public void setArma(Arma arma) {
+        this.arma = arma;
     }
 
     public Arma getArma() {
