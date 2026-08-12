@@ -1,8 +1,6 @@
 package dominio;
 
-import interfaces.Atacante;
-
-public class Mago extends Personagem implements Atacante {
+public class Mago extends Personagem {
     public Mago(String nome, int vida, int ataqueBase, Arma arma, int nivel) {
         super(nome, vida, ataqueBase, arma, nivel);
     }

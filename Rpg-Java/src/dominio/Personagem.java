@@ -1,6 +1,8 @@
 package dominio;
 
-public abstract class Personagem  {
+import interfaces.Atacante;
+
+public abstract class Personagem implements Atacante {
     private String nome;
     private int vida;
     private int ataqueBase;
@@ -23,6 +25,11 @@ public abstract class Personagem  {
     }
 
     public abstract void exibirStatus();
+
+    @Override
+    public void atacar(Personagem alvo) {
+
+    }
 
     public int getAtaqueTotal() {
         if (arma == null){
