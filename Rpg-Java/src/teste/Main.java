@@ -6,6 +6,7 @@ import dominio.Guerreiro;
 import dominio.Mago;
 import dominio.Arqueiro;
 import interfaces.Atacante;
+import servico.SistemaBatalha;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,6 +15,7 @@ public class Main {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
+
         ArrayList<Arma> armas = new ArrayList<>();
         armas.add(new Arma("Espada do Caos", 10));
         armas.add(new Arma("Cajado Místico", 7));
@@ -35,10 +37,16 @@ public class Main {
         Personagem mago = personagens.get(1);
         Personagem arqueiro = personagens.get(2);
 
-        guerreiro.atacar(mago);
-        mago.atacar(guerreiro);
-        arqueiro.atacar(guerreiro);
+        SistemaBatalha sistemaBatalha = new SistemaBatalha();
+
+        //sistemaBatalha.atacar(guerreiro, mago);
+        //sistemaBatalha.atacar(mago, guerreiro);
+       // sistemaBatalha.atacar(arqueiro, guerreiro);
+        System.out.println();
+
+        sistemaBatalha.iniciarBatalha(guerreiro,mago);
     }
+
 
     static void exibirMenu(){
         System.out.println("1 - Criar Personagem");

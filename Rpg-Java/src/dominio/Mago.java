@@ -20,6 +20,7 @@ public class Mago extends Personagem {
         alvo.setVida(novaVida);
 
         System.out.println(getNome() + " atacou " + alvo.getNome());
+
         System.out.println("Vida restante de " + alvo.getNome() + ": " + alvo.getVida());
     }
 }
