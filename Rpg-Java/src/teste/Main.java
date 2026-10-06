@@ -103,27 +103,39 @@ public class Main {
                     if (escolha1 < 1 || escolha1 > personagens.size()) {
                         System.out.println("Personagem não encontrado");
 
-                    }
-                    else if (escolha2 < 1 || escolha2 > personagens.size()) {
+                    } else if (escolha2 < 1 || escolha2 > personagens.size()) {
                         System.out.println("Personagem não encontrado");
 
                     } else if (escolha1 == escolha2) {
                         System.out.println("Você não pode escolher o mesmo personagem.");
-                        
+
                     } else {
                         Personagem personagem1 = personagens.get(escolha1 - 1);
                         Personagem personagem2 = personagens.get(escolha2 - 1);
 
-                        sistemaBatalha.iniciarBatalha(personagem1,personagem2);
+                        sistemaBatalha.iniciarBatalha(personagem1, personagem2);
                     }
+                    break;
 
 
-               break;
+                case 4:
+
+                    System.out.println("=== ADICIONAR ITEM ===");
+
+                    System.out.println("Nome da arma:");
+                    String nomeArma = input.nextLine();
+                    System.out.println("Dano da arma:");
+                    int danoArma = input.nextInt();
+
+                    armas.add(new Arma(nomeArma, danoArma));
+                    System.out.println("Item adicionado com sucesso!");
+
+
+
             }
 
 
         }
-
     }
 
 
