@@ -48,13 +48,11 @@ public class Main {
                     int nivel = input.nextInt();
 
                     System.out.println("Escolha a arma:");
-                    System.out.println("1 - Espada do Caos");
-                    System.out.println("2- Cajado místico");
-                    System.out.println("3 - Arco Elfico");
-
+                    for (int i = 0; i < armas.size(); i++) {
+                        System.out.println((i + 1) + " - " + armas.get(i).getNome());
+                    }
                     int escolha = input.nextInt();
                     Arma armaEscolhida = armas.get(escolha - 1);
-
 
                     System.out.println("Escolha a classe:");
                     System.out.println("1 - Guerreiro");
